@@ -1,0 +1,90 @@
+.login {
+  height: 100vh;
+  background-color: rgb(72, 72, 72);
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.7)), 
+    url("https://cdn.discordapp.com/attachments/897543119078322176/1178342325576015952/login-fundo.jpg?ex=6575cbce&is=656356ce&hm=6569a7542e7842c27dec05816192b55bf050b767853b09bf71600489b969bcac&");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+    
+
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(5, 5, 5, 0.3)), 
+        url("https://cdn.discordapp.com/attachments/897543119078322176/1178341070610903140/login-sb.jpg?ex=6575caa3&is=656355a3&hm=c454d09871eed72de0e2ff856ac6c0a26ef95d42f428ac2090ac8fb6e1529ba8&")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+      
+      p {
+      }
+
+      span {
+        font-size: 14px;
+        margin-top: 320px; /* Ajuste essa propriedade conforme necessário */
+      }
+      
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: rgb(41, 41, 41);
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+      color: #555;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+        input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #303030;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
