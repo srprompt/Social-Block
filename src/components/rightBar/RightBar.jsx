@@ -32,7 +32,7 @@ const RightBar = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('https://coral-app-xcxp2.ondigitalocean.app/api/getAllUsers');
+      const response = await axios.get('https://socialblock-api-ybhf2.ondigitalocean.app/api/getAllUsers');
       // Filtra o usuário atual da lista
       const filteredUsers = response.data.filter(user => user.id !== currentUser.id);
       setUsers(filteredUsers);

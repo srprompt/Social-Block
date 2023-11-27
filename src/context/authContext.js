@@ -11,7 +11,7 @@ export const AuthContextProvider = ({ children }) => {
   // Método para login como você definiu
   const login = async (inputs) => {
     const res = await axios.post(
-      "https://coral-app-xcxp2.ondigitalocean.app/api/autenticacao/login", inputs, {
+      "https://socialblock-api-ybhf2.ondigitalocean.app/api/autenticacao/login", inputs, {
       withCredentials: true,
     });
     setCurrentUser(res.data);
@@ -19,7 +19,7 @@ export const AuthContextProvider = ({ children }) => {
 
   // Método para logout
   const logout = async () => {
-    await axios.post("https://coral-app-xcxp2.ondigitalocean.app/api/autenticacao/logout", {}, {
+    await axios.post("https://socialblock-api-ybhf2.ondigitalocean.app/api/autenticacao/logout", {}, {
       withCredentials: true, // Se estiver usando cookies
     });
     setCurrentUser(null); // Atualizar estado do usuário atual
