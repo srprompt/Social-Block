@@ -5,8 +5,10 @@ import { makeRequest } from "../../axios";
 
 const Posts = ({usuarioId}) => {
 
+  const { currentUser } = useContext(AuthContext);
+
   const { isPending, error, data } = useQuery({queryKey: ['posts'], queryFn: () =>
-      makeRequest.get("/post?usuarioId="+usuarioId).then((res) => {
+      makeRequest.get("/post?usuarioId="+currentUser.id).then((res) => {
         return res.data;
       })
   });
