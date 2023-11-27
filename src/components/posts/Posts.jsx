@@ -6,7 +6,7 @@ import { makeRequest } from "../../axios";
 const Posts = ({usuarioId}) => {
 
   const { isPending, error, data } = useQuery({queryKey: ['posts'], queryFn: () =>
-      makeRequest.get("/post?usuarioId="+usuarioId).then((res) => {
+      makeRequest.get("https://coral-app-xcxp2.ondigitalocean.app/api/post?usuarioId="+usuarioId).then((res) => {
         return res.data;
       })
   });

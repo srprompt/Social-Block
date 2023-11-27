@@ -27,7 +27,7 @@ const Post = ({ post }) => {
   });
   
   const { data2 } = useQuery({queryKey: ['comments'], queryFn: () =>
-      makeRequest.get("/comentario?postId=" + post.id).then((res) => {
+      makeRequest.get("https://coral-app-xcxp2.ondigitalocean.app/api/comentario?postId=" + post.id).then((res) => {
         return res.data;
       })
   });
