@@ -28,7 +28,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post("http://localhost:8800/api/autenticacao/register", inputs);
+      await axios.post("https://coral-app-xcxp2.ondigitalocean.app/api/autenticacao/register", inputs);
       setIsRegistered(true);
     } catch (err) {
       setErr(err.response.data);
