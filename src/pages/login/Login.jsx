@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import "./login.scss";
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -10,13 +11,13 @@ const Login = () => {
   });
   const [err, setErr] = useState(null);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
   const { login } = useContext(AuthContext);
-  
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -39,34 +40,40 @@ const Login = () => {
     }
   };
 
-   
-
   return (
-    <div className="login">
-      <div className="card">
-        <div className="left">
+    
+    <div className="container-fluid login">
+      
+      <div className="row card">
+        <div className="col-md-6 left">
           <span>Ainda não está presente?</span>
           <Link to="/register">
-            <button>Faça parte</button>
+            <button className="btn btn-light">Faça parte</button>
           </Link>
         </div>
-        <div className="right">
+        <div className="col-md-6 right">
           <h1>Login</h1>
           <form>
-            <input
-              type="text"
-              placeholder="Usuário"
-              name="username"
-              onChange={handleChange}
-            />
-            <input
-              type="password"
-              placeholder="Senha"
-              name="senha"
-              onChange={handleChange}
-            />
-            {err && err}
-            <button onClick={handleLogin}>Entrar</button>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Usuário"
+                name="username"
+                className="form-control"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                placeholder="Senha"
+                name="senha" 
+                className="form-control"
+                onChange={handleChange}
+              />
+            </div>
+            {err && <p className="text-danger">{err}</p>}
+            <button onClick={handleLogin} className="btn btn-dark">Entrar</button>
           </form>
         </div>
       </div>
