@@ -7,12 +7,12 @@
   justify-content: center;
 
   .card {
-    width: 50%;
+    width: 90%; /* Alteração: use uma porcentagem ou vw em vez de um valor fixo */
+    max-width: 800px; /* Adição: limite máximo de largura para garantir uma boa legibilidade */
+    margin: 0 auto; /* Adição: centralizar o conteúdo */
     display: flex;
-    flex-direction: row-reverse;
     background-color: white;
     border-radius: 10px;
-    min-height: 600px;
     overflow: hidden;
 
     .left {
@@ -96,6 +96,30 @@
           cursor: pointer;
         }
       }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .card {
+      flex-direction: column; /* Alteração: empilhar os elementos em telas menores */
+      height: auto; /* Adição: altura automática para acomodar o conteúdo verticalmente */
+    }
+  
+    .left {
+      height: auto; /* Adição: altura automática para acomodar o conteúdo verticalmente */
+      padding: 20px; /* Alteração: reduzir o preenchimento para telas menores */
+      text-align: center; /* Adição: centralizar o texto */
+    }
+  
+    .right {
+      padding: 20px; /* Alteração: reduzir o preenchimento para telas menores */
+    }
+  
+    h1 {
+      font-size: 50px; /* Alteração: ajustar o tamanho da fonte para telas menores */
+    }
+  
+    input, button {
+      width: 100%; /* Alteração: ocupar a largura total em telas menores */
     }
   }
 }
