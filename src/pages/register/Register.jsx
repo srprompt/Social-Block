@@ -72,7 +72,7 @@ const Register = () => {
             <input
               type="password"
               placeholder="Senha"
-              name="senha"
+              name="password"
               onChange={handleChange}
             />
             <input
