@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
 
      // Validar se todos os campos obrigatórios estão preenchidos
-     if (!inputs.username || !inputs.email || !inputs.password || !inputs.nome) {
+     if (!inputs.username || !inputs.email || !inputs.senha || !inputs.nome) {
       setErr("Por favor, preencha todos os campos.");
       return;
     }
@@ -72,7 +72,7 @@ const Register = () => {
             <input
               type="password"
               placeholder="Senha"
-              name="password"
+              name="senha"
               onChange={handleChange}
             />
             <input
